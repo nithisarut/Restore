@@ -1,0 +1,18 @@
+{
+  "name": "restore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && dotnet watch run --port 7088",
+    "client": "yarn --cwd client dev",
+    "start": "concurrently -k \"yarn client\" \"yarn server\"",
+    "setupserver": "cd server && dotnet restore",
+    "setupcliend": "cd client && yarn",
+    "setup": "concurrently \"yarn setupcliend\" \"yarn setupserver\""
+  },
+  "keywords": [],
+  "author": "KARM <pj@example.com>",
+  "license": "ISC"
+}
